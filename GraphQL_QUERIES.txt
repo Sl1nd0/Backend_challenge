@@ -1,0 +1,39 @@
+query getUser {
+ user(id: "1") {
+  email
+	}
+}
+
+query getJokePerCategory {
+   category(categories: "fashion") {
+    categories    
+    value 
+    url
+  }
+}
+
+query getAllCategories {
+  categories {
+    id
+    categories
+  } 
+}
+
+
+query getAllUsers {
+  users {
+    id
+    name
+    email 
+    password
+  }
+}
+
+mutation login {
+  login(input: {
+  	email: "john@gmail.com",
+    password:"25252"
+  }) {
+    token
+  }
+}
